@@ -559,7 +559,7 @@ template<typename ValueType, template <typename> typename KeyExtractor> inline v
 	if(!subTreeRoot.isLeaf()) {
 		subTreeRoot.executeForSpecificNodeType(true, [&, this](auto & node) -> void {
 			std::string nodeType = nodeAlgorithmToString(node.mNodeType);
-			stats["total"] += node.getNodeSizeInmRootinsertBytes();
+			stats["total"] += node.getNodeSizeInBytes();
 			stats[nodeType] += 1.0;
 			for(HOTSingleThreadedChildPointer const & childPointer : node) {
 				this->collectStatsForSubtree(childPointer, stats);
