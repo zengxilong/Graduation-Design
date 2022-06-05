@@ -99,6 +99,7 @@ inline uint16_t getMostSignificantBitIndexInByte(uint8_t byte) {
 
 inline __attribute__((always_inline)) int getMostSignificantBitIndex(uint32_t number) {
 	int msb;
+	// 找到最高位为1的位置
 	asm("bsr %1,%0" : "=r"(msb) : "r"(number));
 	return msb;
 }

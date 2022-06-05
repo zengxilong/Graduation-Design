@@ -19,6 +19,9 @@ namespace hot { namespace singlethreaded {
  * 		+ the side of the BiNode the entry to delete was contained in (mDiscriminativeBitValueForEntry=0 => left,  mDiscriminativeBitValueForEntry=1 => right)
  * 	- a potential direct neighbour of the entry to delete (this is important for merge operations, or BiNode pull down => in both case this information must be taken from the parent's node deletion information)
  */
+/**
+ *  
+*/
 class HOTSingleThreadedDeletionInformation {
 	HOTSingleThreadedChildPointer mContainingNode;
 	uint32_t mCompressionMask;
